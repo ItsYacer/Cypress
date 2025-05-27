@@ -1,0 +1,23 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedTest":" npx cypress run --headed",
+    "chromeTest": "npx cypress run --browser chrome",
+    "recordDashBoardTest":"npx cypress run --record --key 10e27236-4db4-4989-b88e-b4222a073d8b",
+    "GreenKartTest": "npx cypress run --spec \"cypress/e2e/GreenKart/*\"",
+    "SmokeTest":"npx cypress run --spec \"cypress/e2e/GreenKart/test1.cy.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^14.3.2"
+  },
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
