@@ -4,16 +4,18 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "headedTest":" npx cypress run --headed",
+    "headedTest": " npx cypress run --headed",
     "chromeTest": "npx cypress run --browser chrome",
-    "recordDashBoardTest":"npx cypress run --record --key 10e27236-4db4-4989-b88e-b4222a073d8b",
+    "recordDashBoardTest": "npx cypress run --record --key 10e27236-4db4-4989-b88e-b4222a073d8b",
     "GreenKartTest": "npx cypress run --spec \"cypress/e2e/GreenKart/*\"",
-    "SmokeTest":"npx cypress run --spec \"cypress/e2e/GreenKart/test1.cy.js\""
+    "SmokeTest": "npx cypress run --spec \"cypress/e2e/GreenKart/test1.cy.js\""
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@cypress/browserify-preprocessor": "latest",
     "cypress": "^14.3.2"
   },
   "devDependencies": {

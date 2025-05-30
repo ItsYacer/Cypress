@@ -14,13 +14,13 @@ describe("End to End Example",()=>{
         const productName = this.data.productName;
         
         this.homePage.goTo(Cypress.env("url")+"/loginpagePractise/#")
-        const ProductPage = this.homePage.login(this.data.userName, this.data.password);
+        const productPage = this.homePage.login(this.data.userName, this.data.password);
 
-        ProductPage.pageValidation();
-        ProductPage.getcardCount();
-        ProductPage.selectProduct(productName);
-        ProductPage.selectFirstProduct();
-        const cartPage = ProductPage.goToCart();
+        productPage.pageValidation();
+        productPage.getcardCount().should("have.length", 4);
+        productPage.selectProduct(productName);
+        productPage.selectFirstProduct();
+        const cartPage = productPage.goToCart();
         
         cartPage.sumOfProducts().then((sum) => {
            expect(sum).to.be.lessThan(200000);
