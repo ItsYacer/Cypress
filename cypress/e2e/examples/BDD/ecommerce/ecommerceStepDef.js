@@ -14,6 +14,13 @@ When('I login to the Application', function () {
     this.productPage.getcardCount().should("have.length", 4);
 })
 
+When('I login to the Application portal', function (dataTable) {
+
+    this.productPage = homePage.login(dataTable.rawTable[1][0], dataTable.rawTable[1][1]);
+    this.productPage.pageValidation();
+    this.productPage.getcardCount().should("have.length", 4);
+})
+
 When('I add items to the cart and checkout', function () {
 
     this.productPage.selectProduct(this.data.productName);

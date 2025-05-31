@@ -10,6 +10,12 @@
     "GreenKartTest": "npx cypress run --spec \"cypress/e2e/GreenKart/*\"",
     "SmokeTest": "npx cypress run --spec \"cypress/e2e/GreenKart/test1.cy.js\""
   },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-result/cucumberreuslt.json"
+    }
+  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -20,6 +26,7 @@
   },
   "devDependencies": {
     "cypress-iframe": "^1.0.1",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.9.2"
   }
 }
