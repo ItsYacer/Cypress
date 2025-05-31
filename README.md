@@ -27,20 +27,6 @@ Advanced Patterns
   🔄 Retry mechanisms
   🌐 Cross-domain testing techniques
 
-Project Structure
-cypress/
-├── e2e/                  # Test specifications
-│   ├── GreenKart/        # Specific test suite
-│   ├── *.feature         # BDD feature files
-│   └── *.cy.js           # Test files
-├── fixtures/             # Test data
-│   └── example.json
-├── support/
-│   ├── commands.js       # Custom commands
-│   ├── pageObjects/      # Page object classes
-│   └── e2e.js            # Global configurations
-└── screenshots/          # Test failure screenshots
-
 How to Run Tests
 Basic Commands
 
